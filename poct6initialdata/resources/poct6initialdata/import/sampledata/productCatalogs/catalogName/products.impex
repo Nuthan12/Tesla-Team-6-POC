@@ -14,3 +14,4 @@ $approved=approvalstatus(code)[default='check']
 
 # Insert Products
 INSERT_UPDATE Product;code[unique=true];$supercategories;manufacturerName;manufacturerAID;unit(code);ean;variantType(code);$catalogVersion;$approved
+;300613584;;122394_multi;270600,kids,streetwear,Billabong;pieces;;;
