@@ -195,8 +195,8 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 ;DocumentationNavNodeEntry;;Documentation Navigation Node Entry;DocumentationNavNode;DocumentationLink;
 ## links of the above navigation nodes ##
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;&linkRef;&componentRef;target(code)[default='sameWindow']
-;;AboutSAPCommerceLink;About SAP Commerce Cloud Link;"http://www.cx.sap.com/products/commerce";AboutSAPCommerceLink;AboutSAPCommerceLink;newWindow
-;;DocumentationLink;Documentation Link;"https://help.hybris.com";DocumentationLink;DocumentationLink;newWindow
+#;;AboutSAPCommerceLink;About SAP Commerce Cloud Link;"http://www.cx.sap.com/products/commerce";AboutSAPCommerceLink;AboutSAPCommerceLink;newWindow
+#;;DocumentationLink;Documentation Link;"https://help.hybris.com";DocumentationLink;DocumentationLink;newWindow
 
 ##----- level 5. children of SAPCommerceNavNode -----##
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);links(&linkRef);&nodeRef
@@ -465,7 +465,7 @@ INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique
 
 ## components in slot 3 ##
 INSERT_UPDATE ProductCarouselComponent;$contentCV[unique=true];uid[unique=true];name;products(code,$productCV);scroll(code);popup;&componentRef
-;;PowertoolsHomepageNewProductCarouselComponent;What's New Powertools Homepage Product Carousel;3755219,3881018,3592865,2116279,3755204,1128762,3092788;allVisible;false;PowertoolsHomepageNewProductCarouselComponent
+;;PowertoolsHomepageNewProductCarouselComponent;What's New Powertools Homepage Product Carousel;4567133,4567173,4567174,4567175,4567177;allVisible;false;PowertoolsHomepageNewProductCarouselComponent
 ;;PowertoolsHomepageProductCarouselComponent;Powertools Homepage Product Carousel;3755205,3755211,3756505,3793682,2221933,2116275,2116282;allVisible;false;PowertoolsHomepageProductCarouselComponent
 
 ## This component is not used currently, but still import for future use ##
@@ -984,7 +984,7 @@ INSERT_UPDATE CMSUserGroupRestriction;$contentCV[unique=true];uid[unique=true];n
 ###### Media Start ######
 ## site logo ##
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/svg+xml'];altText;folder(qualifier)[default='images']
-;;/images/theme/logo_hybris_b2b_responsive.svg;logo_hybris_b2b_responsive.jpg;$siteResource/images/theme/logo_hybris_b2b_responsive.jpg;image/svg+xml;hybris Accelerator;
+;;/images/theme/logo_hybris_b2b_responsive.jpg;logo_hybris_b2b_responsive.jpg;$siteResource/images/theme/logo_hybris_b2b_responsive.jpg;image/svg+xml;hybris Accelerator;
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images']
 ;;addEditAddressPagePreview;text/png;AddEditAddressPage.png;$jarResourceCms/preview-images/powertools/AddEditAddressPage.png
@@ -1121,16 +1121,16 @@ INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];positi
                                 ;;NavigationBar-SecureCustomerPortalRegisterPage;NavigationBar;SecureCustomerPortalRegisterPage;NavigationBarSlot
 
 #INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;styleAttributes;&linkRef;&componentRef;target(code)[default='sameWindow'];linkName[lang=en];onlyOneRestrictionMustApply[default='false']
-  #                            ;;RegisterLink;Register Link;/register;class="js-register-navigation-item";RegisterLink;RegisterLink;;Register;
+            #                  ;;RegisterLink;Register Link;/register;class="js-register-navigation-item";RegisterLink;RegisterLink;;Register;
 
 # CMS User Restrictions
 #UPDATE CMSUserRestriction;$contentCV[unique=true];uid[unique=true];components(&componentRef)[mode=append]
-                     #    ;;anonymousUserRestriction;RegisterLink
+                      #   ;;anonymousUserRestriction;RegisterLink
 
 # CMS User Restrictions
 #INSERT_UPDATE CMSSecurePortalRestriction;$contentCV[unique=true];uid[unique=true];components(&componentRef)[mode=append]
-        #                                ;;SecurePortalRestriction;RegisterLink
+                    #                    ;;SecurePortalRestriction;RegisterLink
 
 # CMS HeaderLinks
 #INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid,$contentCV)[mode=append]
-   #                      ;;HeaderLinksSlot;RegisterLink
+                      #   ;;HeaderLinksSlot;RegisterLink
